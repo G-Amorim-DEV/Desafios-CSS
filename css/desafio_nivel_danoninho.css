@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#corpo_principal {
+    height: 100vh;
+    background-color: beige;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr;
+}
+
+#cabecalho {
+    background-color: aqua;
+    margin: 10px;
+}
+
+#secao_principal.desktop {
+    margin: 0px 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 10px;
+}
+
+#secao_principal.mobile {
+    margin: 0px 10px;
+
+    display: none;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 10px;
+}
+
+#box_generico {
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 800px) {
+    #secao_principal.desktop {
+        display: none;
+    }
+
+    #secao_principal.mobile {
+        display: grid;
+    }
+}

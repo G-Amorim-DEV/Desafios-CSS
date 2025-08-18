@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#corpo.desktop{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center center;
+    height: 100vh;
+}
+
+#corpo.mobile{
+
+    display: none;
+    grid-template-columns: 1fr;
+    place-items: center center;
+    height: 100vh;
+}
+
+.box_generico{
+
+    background-color: aqua;
+    height: 90%;
+    width: 90%;
+}
+
+@media (max-width: 800px){
+    
+    #corpo.desktop{
+        display: none;
+    }
+}
+    #corpo.mobile{
+        display: grid;
+    }
+}

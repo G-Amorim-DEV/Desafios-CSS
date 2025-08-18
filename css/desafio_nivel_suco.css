@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#corpo_principal {
+    height: 100vh;
+    background-color: beige;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr;
+}
+
+#cabecalho {
+    background-color: aqua;
+    margin: 10px;
+    
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+}
+
+
+
+#logo{
+    margin: 10PX;
+    padding: 10px;
+    background-color: blue;
+    height: 70px;
+    width: 70px;
+}
+
+
+
+#menu.desktop ul {
+    list-style: none;
+    padding: 10px;
+
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: end;
+}
+
+#menu.mobile ul {
+    list-style: none;
+    padding: 10px;
+
+    display: none; 
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: end;
+}
+
+.botoes_menu {
+    list-style: none;
+    background-color: blue;
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+}
+
+
+#secao_principal.desktop {
+    margin: 0px 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 10px;
+}
+
+#secao_principal.mobile {
+    margin: 0px 10px;
+
+    display: none;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 10px;
+}
+
+#box_generico {
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 800px) {
+
+    #secao_principal.desktop {
+        display: none;
+    }
+
+    #secao_principal.mobile {
+        display: grid;
+    }
+
+   
+    #menu.desktop ul {
+        display: none; 
+    }
+
+   
+    #menu.mobile ul {
+        display: flex;  
+    }
+}
+
+
+
