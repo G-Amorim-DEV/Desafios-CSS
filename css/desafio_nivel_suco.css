@@ -19,22 +19,18 @@
     
     display: grid;
     grid-template-columns: 1fr 4fr;
-
 }
 
-
-
-#logo{
-    margin: 10PX;
+#logo {
+    margin: 10px;
     padding: 10px;
     background-color: blue;
     height: 70px;
     width: 70px;
 }
 
-
-
-#menu.desktop ul {
+/* Menu Desktop */
+#menu_desktop ul {
     list-style: none;
     padding: 10px;
 
@@ -45,15 +41,30 @@
     justify-content: end;
 }
 
-#menu.mobile ul {
+/* Menu Mobile escondido por padrão */
+#menu_mobile {
+    display: none;
+}
+
+#menu_mobile ul {
     list-style: none;
     padding: 10px;
 
-    display: none; 
+    display: flex;
     gap: 30px;
     flex-wrap: wrap;
     align-items: end;
     justify-content: end;
+}
+
+/* Esconde todos os itens do mobile */
+#menu_mobile ul li {
+    display: none;
+}
+
+/* Mostra só o botão principal */
+#menu_mobile ul li#meuBotao {
+    display: block;
 }
 
 .botoes_menu {
@@ -64,8 +75,8 @@
     margin: 10px;
 }
 
-
-#secao_principal.desktop {
+/* Seção Desktop */
+#secao_principal_desktop {
     margin: 0px 10px;
 
     display: grid;
@@ -74,7 +85,8 @@
     gap: 10px;
 }
 
-#secao_principal.mobile {
+/* Seção Mobile */
+#secao_principal_mobile {
     margin: 0px 10px;
 
     display: none;
@@ -89,26 +101,21 @@
     height: 100%;
 }
 
+/* Responsividade */
 @media (max-width: 800px) {
-
-    #secao_principal.desktop {
+    #secao_principal_desktop {
         display: none;
     }
 
-    #secao_principal.mobile {
+    #secao_principal_mobile {
         display: grid;
     }
 
-   
-    #menu.desktop ul {
-        display: none; 
+    #menu_desktop {
+        display: none;
     }
 
-   
-    #menu.mobile ul {
-        display: flex;  
+    #menu_mobile {
+        display: block;
     }
 }
-
-
-
